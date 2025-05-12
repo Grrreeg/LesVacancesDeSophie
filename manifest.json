@@ -1,0 +1,21 @@
+{
+  "name": "Les Vacances de Sophie",
+  "short_name": "VdS",
+  "description": "Service de travel planning sur-mesure pour des voyages personnalisés et authentiques",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8F0",
+  "theme_color": "#4AB3A7",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
