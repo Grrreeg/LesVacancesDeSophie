@@ -3,265 +3,352 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Les Vacances de Sophie - Service de travel planning sur-mesure pour des voyages personnalisés et authentiques">  <meta name="keywords" content="travel planning, voyage sur-mesure, vacances, planning de voyage, séjour personnalisé">  <meta name="author" content="Sophie">
-  <title>Les Vacances de Sophie | Travel Planning Sur-Mesure</title>  <!-- Favicon -->
+  <meta name="description" content="Les Vacances de Sophie - Service de travel planning sur-mesure pour créer des voyages authentiques et personnalisés selon vos envies et votre budget.">
+  <meta name="keywords" content="travel planning, voyage sur-mesure, vacances personnalisées, planning de voyage, séjour personnalisé, carnet de voyage, organisation voyage">
+  <meta name="author" content="Sophie">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="revisit-after" content="7 days">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.lesvacancesdesophie.fr/">
+  <meta property="og:title" content="Les Vacances de Sophie | Travel Planning Sur-Mesure">
+  <meta property="og:description" content="Service de travel planning sur-mesure pour créer des voyages authentiques et personnalisés selon vos envies et votre budget.">
+  <meta property="og:image" content="https://www.lesvacancesdesophie.fr/logo.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.lesvacancesdesophie.fr/">
+  <meta property="twitter:title" content="Les Vacances de Sophie | Travel Planning Sur-Mesure">
+  <meta property="twitter:description" content="Service de travel planning sur-mesure pour créer des voyages authentiques et personnalisés selon vos envies et votre budget.">
+  <meta property="twitter:image" content="https://www.lesvacancesdesophie.fr/logo.png">
+  
+  <title>Les Vacances de Sophie | Travel Planning Sur-Mesure pour Voyages Personnalisés</title>
+  
+  <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.png">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4AB3A7">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.lesvacancesdesophie.fr/">
+  
   <!-- Fonts and Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;600;700&family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Analytics -->
   <script src="https://getinsights.io/js/insights.js"></script>
   <script>
     insights.init('T8wk3nusODJaHiBA');
     insights.trackPages();
   </script>
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://assets.calendly.com">
 </head>
-<body>
-  <!-- Navbar -->  <nav class="navbar">
+<body itemscope itemtype="https://schema.org/WebPage">
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Menu principal">
     <div class="logo">
-      <img src="logo.png" alt="Logo Les Vacances de Sophie">
+      <a href="#accueil" aria-label="Accueil Les Vacances de Sophie">
+        <img src="logo.png" alt="Logo Les Vacances de Sophie">
+      </a>
       <h1><span class="title-first">LES VACANCES DE</span> <span class="title-second">Sophie</span></h1>
     </div>
-    <button class="hamburger" aria-label="Menu de navigation">
+    <button class="hamburger" aria-label="Menu de navigation" aria-expanded="false" aria-controls="nav-links">
       <i class="fas fa-bars"></i>
     </button>
-    <ul class="nav-links">
-      <li><a href="#accueil">Accueil</a></li>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#accueil" aria-current="page">Accueil</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#pourquoi">Pourquoi nous choisir</a></li>
       <li><a href="#formules">Nos formules</a></li>
       <li><a href="#galerie">Galerie</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#reservation">Prendre rendez-vous</a></li>
+      <li><a href="#reservation">Prenez rendez-vous</a></li>
     </ul>
   </nav>
+  
   <!-- Header -->
-  <header id="accueil">
+  <header id="accueil" itemscope itemtype="https://schema.org/WPHeader">
     <div class="header-title-container">
       <img src="logo.png" alt="Logo Les Vacances de Sophie" class="header-logo">
-      <h1><span class="title-first">LES VACANCES DE</span><br><span class="title-second">Sophie</span></h1>
+      <h1 itemprop="headline"><span class="title-first">LES VACANCES DE</span><br><span class="title-second">Sophie</span></h1>
     </div>
-    <h2>Vos voyages, votre histoire</h2>
-    <a href="#contact" class="cta-button">Planifier mon voyage</a>
+    <h2 itemprop="alternativeHeadline">Vos voyages, votre histoire</h2>
+    <a href="#contact" class="cta-button" rel="nofollow">Planifier mon voyage</a>
   </header>
 
   <!-- Services Section -->
-  <section class="section" id="services">
+  <section class="section" id="services" itemscope itemtype="https://schema.org/Service">
     <div class="section-header">
-      <h3>Nos Services</h3>
+      <h2 itemprop="name">Nos Services</h2>
     </div>
-    <p>Je vous accompagne dans la création de vos vacances idéales : choix de la destination, suggestion d'hébergements, activités personnalisées, et un planning clair pour que vous n'ayez plus qu'à profiter.</p>
+    <p itemprop="description">Je vous accompagne dans la création de vos vacances idéales : choix de la destination, suggestion d'hébergements, activités personnalisées, et un planning clair pour que vous n'ayez plus qu'à profiter.</p>
     
     <div class="services">
-      <div class="service-card">
-        <i class="fas fa-map-marked-alt"></i>
-        <h4>Choix de destination</h4>
-        <p>Conseils personnalisés pour choisir la destination qui correspond à vos envies et à votre budget.</p>
+      <div class="service-card" itemscope itemtype="https://schema.org/Service">
+        <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+        <h3 itemprop="name">Choix de destination</h3>
+        <p itemprop="description">Conseils personnalisés pour choisir la destination qui correspond à vos envies et à votre budget.</p>
       </div>
-      <div class="service-card">
-        <i class="fas fa-bed"></i>
-        <h4>Hébergements</h4>
-        <p>Sélection d'hébergements uniques et authentiques adaptés à vos préférences.</p>
+      <div class="service-card" itemscope itemtype="https://schema.org/Service">
+        <i class="fas fa-bed" aria-hidden="true"></i>
+        <h3 itemprop="name">Hébergements</h3>
+        <p itemprop="description">Sélection d'hébergements uniques et authentiques adaptés à vos préférences.</p>
       </div>
-      <div class="service-card">
-        <i class="fas fa-hiking"></i>
-        <h4>Activités</h4>
-        <p>Planification d'activités personnalisées qui sortiront des sentiers battus.</p>
+      <div class="service-card" itemscope itemtype="https://schema.org/Service">
+        <i class="fas fa-hiking" aria-hidden="true"></i>
+        <h3 itemprop="name">Activités</h3>
+        <p itemprop="description">Planification d'activités personnalisées qui sortiront des sentiers battus.</p>
       </div>
     </div>
   </section>
 
   <!-- Why Choose Us Section -->
-  <section class="section" id="pourquoi">
+  <section class="section" id="pourquoi" itemscope itemtype="https://schema.org/ItemList">
     <div class="section-header">
-      <h3>Pourquoi nous choisir ?</h3>
+      <h2 itemprop="name">Pourquoi nous choisir ?</h2>
     </div>
     <p>Parce que chaque voyage est unique, j'accorde une grande importance à l'écoute, à la proximité et à l'authenticité. Vous bénéficiez d'un accompagnement personnalisé et d'un carnet de voyage conçu avec soin.</p>
     
     <div class="services">
-      <div class="service-card">
-        <i class="fas fa-heart"></i>
-        <h4>Passion</h4>
-        <p>Une véritable passion pour le voyage et la découverte de nouvelles cultures.</p>
+      <div class="service-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="1" />
+        <i class="fas fa-heart" aria-hidden="true"></i>
+        <h3 itemprop="name">Passion</h3>
+        <p itemprop="description">Une véritable passion pour le voyage et la découverte de nouvelles cultures.</p>
       </div>
-      <div class="service-card">
-        <i class="fas fa-handshake"></i>
-        <h4>Personnalisation</h4>
-        <p>Un service entièrement personnalisé selon vos goûts et vos attentes.</p>
+      <div class="service-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="2" />
+        <i class="fas fa-handshake" aria-hidden="true"></i>
+        <h3 itemprop="name">Personnalisation</h3>
+        <p itemprop="description">Un service entièrement personnalisé selon vos goûts et vos attentes.</p>
       </div>
-      <div class="service-card">
-        <i class="fas fa-shield-alt"></i>
-        <h4>Expertise</h4>
-        <p>Une expertise reconnue et un réseau de partenaires de confiance.</p>
-      </div>    </div>
+      <div class="service-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="position" content="3" />
+        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+        <h3 itemprop="name">Expertise</h3>
+        <p itemprop="description">Une expertise reconnue et un réseau de partenaires de confiance.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Formules Section -->
-  <section class="section" id="formules">
+  <section class="section" id="formules" itemscope itemtype="https://schema.org/ItemList">
     <div class="section-header">
-      <h3>Nos Formules</h3>
+      <h2 itemprop="name">Nos Formules</h2>
     </div>
     <p>Découvrez nos différentes formules adaptées à vos besoins et à votre budget. Chaque formule est entièrement personnalisable.</p>
     
     <div class="pricing-table">
-      <div class="pricing-card">        <div class="pricing-header">
-          <h4>Découverte</h4>
-          <div class="price">79€</div>
+      <div class="pricing-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+        <meta itemprop="position" content="1" />
+        <div class="pricing-header">
+          <h3 itemprop="name">Découverte</h3>
+          <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <span itemprop="price">79</span><span itemprop="priceCurrency" content="EUR">€</span>
+            <meta itemprop="availability" content="https://schema.org/InStock" />
+          </div>
           <p class="price-period">forfait unique</p>
-        </div><div class="pricing-features">
+        </div>
+        <div class="pricing-features" itemprop="description">
           <ul>
-            <li><i class="fas fa-check"></i> <span>Entretien personnalisé (30 min)</span></li>
-            <li><i class="fas fa-check"></i> <span>Recommandations de destination</span></li>
-            <li><i class="fas fa-check"></i> <span>Liste d'hébergements</span></li>
-            <li><i class="fas fa-check"></i> <span>5 activités suggérées</span></li>            <li class="unavailable"><i class="fas fa-times"></i> <span>Planning détaillé</span></li>
-            <li class="unavailable"><i class="fas fa-times"></i> <span>Carnet de voyage</span></li>
-            <li class="unavailable"><i class="fas fa-times"></i> <span>Assistance pendant le séjour</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Entretien personnalisé (30 min)</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Recommandations de destination</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Liste d'hébergements</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>5 activités suggérées</span></li>
+            <li class="unavailable"><i class="fas fa-times" aria-hidden="true"></i> <span>Planning détaillé</span></li>
+            <li class="unavailable"><i class="fas fa-times" aria-hidden="true"></i> <span>Carnet de voyage</span></li>
+            <li class="unavailable"><i class="fas fa-times" aria-hidden="true"></i> <span>Assistance pendant le séjour</span></li>
           </ul>
         </div>
         <div class="pricing-footer">
-          <a href="#contact" class="btn-pricing" data-formule="decouverte">Choisir cette formule</a>
+          <a href="#contact" class="btn-pricing" data-formule="decouverte" rel="nofollow" itemprop="url">Choisir cette formule</a>
         </div>
       </div>
       
-      <div class="pricing-card featured">
-        <div class="ribbon">Populaire</div>        <div class="pricing-header">
-          <h4>Aventure</h4>
-          <div class="price">149€</div>
+      <div class="pricing-card featured" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+        <meta itemprop="position" content="2" />
+        <div class="ribbon">Populaire</div>
+        <div class="pricing-header">
+          <h3 itemprop="name">Aventure</h3>
+          <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <span itemprop="price">149</span><span itemprop="priceCurrency" content="EUR">€</span>
+            <meta itemprop="availability" content="https://schema.org/InStock" />
+          </div>
           <p class="price-period">forfait unique</p>
-        </div><div class="pricing-features">
+        </div>
+        <div class="pricing-features" itemprop="description">
           <ul>
-            <li><i class="fas fa-check"></i> <span>Entretien personnalisé (1h)</span></li>
-            <li><i class="fas fa-check"></i> <span>Recommandations de destination</span></li>
-            <li><i class="fas fa-check"></i> <span>Liste d'hébergements</span></li>
-            <li><i class="fas fa-check"></i> <span>10 activités suggérées</span></li>            <li><i class="fas fa-check"></i> <span>Planning détaillé jour par jour</span></li>
-            <li><i class="fas fa-check"></i> <span>Carnet de voyage numérique</span></li>
-            <li class="unavailable"><i class="fas fa-times"></i> <span>Assistance pendant le séjour</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Entretien personnalisé (1h)</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Recommandations de destination</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Liste d'hébergements</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>10 activités suggérées</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Planning détaillé jour par jour</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Carnet de voyage numérique</span></li>
+            <li class="unavailable"><i class="fas fa-times" aria-hidden="true"></i> <span>Assistance pendant le séjour</span></li>
           </ul>
         </div>
         <div class="pricing-footer">
-          <a href="#contact" class="btn-pricing" data-formule="aventure">Choisir cette formule</a>
+          <a href="#contact" class="btn-pricing" data-formule="aventure" rel="nofollow" itemprop="url">Choisir cette formule</a>
         </div>
       </div>
       
-      <div class="pricing-card">        <div class="pricing-header">
-          <h4>Sur-Mesure</h4>
-          <div class="price">299€</div>
+      <div class="pricing-card" itemprop="itemListElement" itemscope itemtype="https://schema.org/Product">
+        <meta itemprop="position" content="3" />
+        <div class="pricing-header">
+          <h3 itemprop="name">Sur-Mesure</h3>
+          <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <span itemprop="price">299</span><span itemprop="priceCurrency" content="EUR">€</span>
+            <meta itemprop="availability" content="https://schema.org/InStock" />
+          </div>
           <p class="price-period">forfait unique</p>
-        </div><div class="pricing-features">
+        </div>
+        <div class="pricing-features" itemprop="description">
           <ul>
-            <li><i class="fas fa-check"></i> <span>Entretiens personnalisés illimités</span></li>
-            <li><i class="fas fa-check"></i> <span>Recommandations de destination</span></li>
-            <li><i class="fas fa-check"></i> <span>Réservation des hébergements</span></li>
-            <li><i class="fas fa-check"></i> <span>Programme d'activités complet</span></li>            <li><i class="fas fa-check"></i> <span>Planning détaillé jour par jour</span></li>
-            <li><i class="fas fa-check"></i> <span>Carnet de voyage imprimé</span></li>
-            <li><i class="fas fa-check"></i> <span>Assistance 7j/7 pendant le séjour</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Entretiens personnalisés illimités</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Recommandations de destination</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Réservation des hébergements</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Programme d'activités complet</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Planning détaillé jour par jour</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Carnet de voyage imprimé</span></li>
+            <li><i class="fas fa-check" aria-hidden="true"></i> <span>Assistance 7j/7 pendant le séjour</span></li>
           </ul>
         </div>
         <div class="pricing-footer">
-          <a href="#contact" class="btn-pricing" data-formule="sur-mesure">Choisir cette formule</a>
+          <a href="#contact" class="btn-pricing" data-formule="sur-mesure" rel="nofollow" itemprop="url">Choisir cette formule</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Gallery Section -->
-  <section class="section" id="galerie">
+  <section class="section" id="galerie" itemscope itemtype="https://schema.org/ImageGallery">
     <div class="section-header">
-      <h3>Galerie</h3>
+      <h2 itemprop="name">Galerie</h2>
     </div>
-    <p>Découvrez quelques exemples de ce que nous proposons pour vous aider à créer des voyages mémorables.</p>
+    <p itemprop="description">Découvrez quelques exemples de ce que nous proposons pour vous aider à créer des voyages mémorables.</p>
     
     <div class="gallery">
-      <div class="gallery-item">
-        <img src="happy.png" alt="Pierre à Bali">
+      <div class="gallery-item" itemscope itemtype="https://schema.org/ImageObject">
+        <img src="happy.png" alt="Client heureux à Bali profitant d'une expérience authentique" width="400" height="300" loading="lazy" itemprop="contentUrl">
         <div class="gallery-caption">
-          <h4>Expériences authentiques</h4>
-          <p>Des moments de bonheur à vivre pleinement</p>
+          <h3 itemprop="name">Expériences authentiques</h3>
+          <p itemprop="description">Des moments de bonheur à vivre pleinement</p>
         </div>
       </div>
-      <div class="gallery-item">
-        <img src="planning-voyage.jpg" alt="Planning de voyage détaillé">
+      <div class="gallery-item" itemscope itemtype="https://schema.org/ImageObject">
+        <img src="planning-voyage.jpg" alt="Planning de voyage personnalisé avec itinéraires détaillés" width="400" height="300" loading="lazy" itemprop="contentUrl">
         <div class="gallery-caption">
-          <h4>Planification personnalisée</h4>
-          <p>Des itinéraires sur-mesure pour chaque voyageur</p>
+          <h3 itemprop="name">Planification personnalisée</h3>
+          <p itemprop="description">Des itinéraires sur-mesure pour chaque voyageur</p>
         </div>
       </div>
-      <div class="gallery-item">
-        <img src="plage-coucher-soleil.jpg" alt="Plage au coucher de soleil">
+      <div class="gallery-item" itemscope itemtype="https://schema.org/ImageObject">
+        <img src="plage-coucher-soleil.jpg" alt="Magnifique plage au coucher de soleil, destination de rêve" width="400" height="300" loading="lazy" itemprop="contentUrl">
         <div class="gallery-caption">
-          <h4>Destinations de rêve</h4>
-          <p>Des lieux sélectionnés pour leur beauté et leur authenticité</p>
+          <h3 itemprop="name">Destinations de rêve</h3>
+          <p itemprop="description">Des lieux sélectionnés pour leur beauté et leur authenticité</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="section" id="contact">
+  <section class="section" id="contact" itemscope itemtype="https://schema.org/ContactPage">
     <div class="section-header">
-      <h3>Contact</h3>
+      <h2 itemprop="name">Contact</h2>
     </div>
     <p>Prêt(e) à planifier votre prochaine aventure ? Contactez-moi pour commencer à créer ensemble le voyage de vos rêves.</p>
+    
+    <div itemprop="mainEntity" itemscope itemtype="https://schema.org/ContactPoint">
       <form action="mailto:contact@lesvacancesdesophie.fr" method="POST" enctype="text/plain">
-      <div class="form-group">
-        <i class="fas fa-user"></i>
-        <input type="text" name="nom" placeholder="Votre nom" required>
-      </div>
-      <div class="form-group">
-        <i class="fas fa-envelope"></i>
-        <input type="email" name="email" placeholder="Votre email" required>
-      </div>
-      <div class="form-group">
-        <i class="fas fa-tag"></i>
-        <select name="formule" id="formule-select">
-          <option value="">Choisissez une formule (optionnel)</option>
-          <option value="decouverte">Découverte (79€)</option>
-          <option value="aventure">Aventure (149€)</option>
-          <option value="sur-mesure">Sur-Mesure (299€)</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <i class="fas fa-comment"></i>
-        <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
-      </div>
-      <button type="submit">Envoyer <i class="fas fa-paper-plane"></i></button>
-    </form>
-  </section>
-  <section class="section" id="reservation">
-    <div class="section-header">
-      <h3>Réservez notre premier échange</h3>
+        <div class="form-group">
+          <i class="fas fa-user" aria-hidden="true"></i>
+          <label for="nom" class="visually-hidden">Votre nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <label for="email" class="visually-hidden">Votre email</label>
+          <input type="email" id="email" name="email" placeholder="Votre email" required>
+        </div>
+        <div class="form-group">
+          <i class="fas fa-tag" aria-hidden="true"></i>
+          <label for="formule-select" class="visually-hidden">Choisissez une formule</label>
+          <select name="formule" id="formule-select">
+            <option value="">Choisissez une formule (optionnel)</option>
+            <option value="decouverte">Découverte (79€)</option>
+            <option value="aventure">Aventure (149€)</option>
+            <option value="sur-mesure">Sur-Mesure (299€)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <i class="fas fa-comment" aria-hidden="true"></i>
+          <label for="message" class="visually-hidden">Votre message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+        </div>
+        <button type="submit">Envoyer <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+      </form>
+      <div itemprop="contactType" content="customer service"></div>
+      <meta itemprop="email" content="contact@lesvacancesdesophie.fr">
+      <meta itemprop="availableLanguage" content="French">
     </div>
-    <p>Prêt(e) à planifier votre prochaine aventure ? Prenez rendez-vous</p>
-    <div class="calendly-inline-widget" data-url="https://calendly.com/gregopujo" style="min-width:320px;height:70em;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </section>
+  <!-- Reservation Section -->
+  <section class="section" id="reservation" itemscope itemtype="https://schema.org/Service">
+    <div class="section-header">
+      <h2 itemprop="name">Réservez</h2>
+    </div>
+    <p itemprop="description">Prêt(e) à planifier votre prochaine aventure ? Prenez rendez-vous pour un premier entretien personnalisé.</p>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/gregopujo" style="min-width:320px;height:70rem;" title="Calendrier de réservation"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async defer></script>
     <!-- Fin de widget en ligne Calendly -->
   </section>
   <!-- Footer -->
-  <footer>
+  <footer itemscope itemtype="https://schema.org/WPFooter">
     <div class="footer-content">
       <div class="footer-column">
-        <h4>Les Vacances de Sophie</h4>
-        <p>Service de travel planning sur-mesure pour des voyages personnalisés et authentiques.</p>
+        <h2>Les Vacances de Sophie</h2>
+        <p itemprop="description">Service de travel planning sur-mesure pour des voyages personnalisés et authentiques.</p>
+        <address itemscope itemtype="https://schema.org/Organization">
+          <meta itemprop="name" content="Les Vacances de Sophie">
+          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <meta itemprop="addressCountry" content="FR">
+          </div>
+          <meta itemprop="email" content="contact@lesvacancesdesophie.fr">
+          <meta itemprop="url" content="https://www.lesvacancesdesophie.fr">
+        </address>
       </div>
       <div class="footer-column">
-        <h4>Liens rapides</h4>        <ul>
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pourquoi">Pourquoi nous choisir</a></li>
-          <li><a href="#formules">Nos formules</a></li>
-          <li><a href="#galerie">Galerie</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <h2>Liens rapides</h2>
+        <nav aria-label="Menu du pied de page">
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pourquoi">Pourquoi nous choisir</a></li>
+            <li><a href="#formules">Nos formules</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#reservation">Réservation</a></li>
+          </ul>
+        </nav>
       </div>
       <div class="footer-column">
-        <h4>Suivez-nous</h4>
+        <h2>Suivez-nous</h2>
         <div class="social-links">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+          <a href="https://facebook.com/LeVacancesDeSophie" aria-label="Facebook" rel="noopener" itemprop="sameAs"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="https://instagram.com/LeVacancesDeSophie" aria-label="Instagram" rel="noopener" itemprop="sameAs"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://pinterest.com/LeVacancesDeSophie" aria-label="Pinterest" rel="noopener" itemprop="sameAs"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -269,11 +356,40 @@
       &copy; 2025 Les Vacances de Sophie — Tous droits réservés
     </div>
   </footer>  <!-- Back to top button -->
-  <a href="#accueil" class="back-to-top" aria-label="Retour en haut">
-    <i class="fas fa-chevron-up"></i>
+  <a href="#accueil" class="back-to-top" aria-label="Retour en haut de la page">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
   </a>
 
+  <!-- Structured data for Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Les Vacances de Sophie",
+    "description": "Service de travel planning sur-mesure pour des voyages personnalisés et authentiques",
+    "url": "https://www.lesvacancesdesophie.fr",
+    "logo": "https://www.lesvacancesdesophie.fr/logo.png",
+    "email": "contact@lesvacancesdesophie.fr",
+    "sameAs": [
+      "https://facebook.com/LeVacancesDeSophie",
+      "https://instagram.com/LeVacancesDeSophie",
+      "https://pinterest.com/LeVacancesDeSophie"
+    ],
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.lesvacancesdesophie.fr/#reservation"
+      },
+      "result": {
+        "@type": "Reservation",
+        "name": "Réservation d'un entretien de travel planning"
+      }
+    }
+  }
+  </script>
+
   <!-- JavaScript -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
