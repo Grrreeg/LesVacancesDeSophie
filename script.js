@@ -59,11 +59,14 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Smooth animation for gallery items (on scroll)
-const galleryItems = document.querySelectorAll('.gallery-item');
+// Stockage global des éléments de la galerie pour l'animation
+window.galleryItems = document.querySelectorAll('.gallery-item');
 
 function checkGalleryVisibility() {
-  galleryItems.forEach(item => {
+  // Utiliser la collection la plus récente d'éléments de galerie
+  const currentGalleryItems = window.galleryItems || document.querySelectorAll('.gallery-item');
+  
+  currentGalleryItems.forEach(item => {
     const rect = item.getBoundingClientRect();
     const isVisible = rect.top < window.innerHeight * 0.9;
     
@@ -74,16 +77,56 @@ function checkGalleryVisibility() {
   });
 }
 
-// Initial styles for gallery animation
-galleryItems.forEach(item => {
-  item.style.opacity = '0';
-  item.style.transform = 'translateY(20px)';
-  item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-});
+// Les styles initiaux sont maintenant gérés dans la fonction loadDynamicGallery
 
 // Check visibility on scroll and on page load
 window.addEventListener('scroll', checkGalleryVisibility);
 window.addEventListener('load', checkGalleryVisibility);
+
+// Fonction pour générer dynamiquement la galerie à partir des données
+function loadDynamicGallery() {
+  const galleryContainer = document.getElementById('dynamic-gallery');
+  
+  if (galleryContainer && typeof galleryData !== 'undefined') {
+    // Vider la galerie avant de la remplir (au cas où)
+    galleryContainer.innerHTML = '';
+    
+    // Générer un élément pour chaque image de la galerie
+    galleryData.forEach(item => {
+      const galleryItem = document.createElement('div');
+      galleryItem.className = 'gallery-item';
+      galleryItem.setAttribute('itemscope', '');
+      galleryItem.setAttribute('itemtype', 'https://schema.org/ImageObject');
+      
+      // Définir le contenu HTML de l'élément de galerie
+      galleryItem.innerHTML = `
+        <img src="${item.image}" alt="${item.alt}" width="400" height="300" loading="lazy" itemprop="contentUrl">
+        <div class="gallery-caption">
+          <h3 itemprop="name">${item.title}</h3>
+          <p itemprop="description">${item.description}</p>
+        </div>
+      `;
+      
+      // Ajouter l'élément au conteneur
+      galleryContainer.appendChild(galleryItem);
+      
+      // Appliquer les mêmes styles d'animation que pour les éléments statiques
+      galleryItem.style.opacity = '0';
+      galleryItem.style.transform = 'translateY(20px)';
+      galleryItem.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+    
+    // Mettre à jour la collection d'éléments de galerie pour l'animation
+    const updatedGalleryItems = document.querySelectorAll('.gallery-item');
+    window.galleryItems = updatedGalleryItems;
+    
+    // Vérifier la visibilité des nouveaux éléments
+    checkGalleryVisibility();
+  }
+}
+
+// Charger la galerie au chargement de la page
+window.addEventListener('load', loadDynamicGallery);
 
 // Gestion de la sélection de formule dans le formulaire de contact
 document.addEventListener('DOMContentLoaded', () => {

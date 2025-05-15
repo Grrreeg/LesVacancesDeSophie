@@ -229,7 +229,6 @@
       </div>
     </div>
   </section>
-
   <!-- Gallery Section -->
   <section class="section" id="galerie" itemscope itemtype="https://schema.org/ImageGallery">
     <div class="section-header">
@@ -237,28 +236,9 @@
     </div>
     <p itemprop="description">Découvrez quelques exemples de ce que nous proposons pour vous aider à créer des voyages mémorables.</p>
     
-    <div class="gallery">
-      <div class="gallery-item" itemscope itemtype="https://schema.org/ImageObject">
-        <img src="happy.png" alt="Client heureux à Bali profitant d'une expérience authentique" width="400" height="300" loading="lazy" itemprop="contentUrl">
-        <div class="gallery-caption">
-          <h3 itemprop="name">Expériences authentiques</h3>
-          <p itemprop="description">Des moments de bonheur à vivre pleinement</p>
-        </div>
-      </div>
-      <div class="gallery-item" itemscope itemtype="https://schema.org/ImageObject">
-        <img src="planning-voyage.jpg" alt="Planning de voyage personnalisé avec itinéraires détaillés" width="400" height="300" loading="lazy" itemprop="contentUrl">
-        <div class="gallery-caption">
-          <h3 itemprop="name">Planification personnalisée</h3>
-          <p itemprop="description">Des itinéraires sur-mesure pour chaque voyageur</p>
-        </div>
-      </div>
-      <div class="gallery-item" itemscope itemtype="https://schema.org/ImageObject">
-        <img src="plage-coucher-soleil.jpg" alt="Magnifique plage au coucher de soleil, destination de rêve" width="400" height="300" loading="lazy" itemprop="contentUrl">
-        <div class="gallery-caption">
-          <h3 itemprop="name">Destinations de rêve</h3>
-          <p itemprop="description">Des lieux sélectionnés pour leur beauté et leur authenticité</p>
-        </div>
-      </div>
+    <!-- La galerie sera remplie dynamiquement par JavaScript -->
+    <div id="dynamic-gallery" class="gallery">
+      <!-- Les éléments seront générés ici par JavaScript -->
     </div>
   </section>
   <section class="section" id="contact" itemscope itemtype="https://schema.org/Service">
@@ -344,8 +324,8 @@
     }
   }
   </script>
-
   <!-- JavaScript -->
+  <script src="gallery-data.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
