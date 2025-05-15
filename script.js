@@ -2,18 +2,49 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
+// Initialisation du menu burger avec une icône claire
+if (!hamburger.querySelector('i')) {
+  hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+}
+
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
-  hamburger.innerHTML = navLinks.classList.contains('active') 
-    ? '<i class="fas fa-times"></i>' 
-    : '<i class="fas fa-bars"></i>';
+  
+  // Supprime l'icône existante et ajoute la nouvelle avec une transition fluide
+  const currentIcon = hamburger.querySelector('i');
+  if (currentIcon) {
+    currentIcon.remove();
+  }
+  
+  const newIcon = document.createElement('i');
+  newIcon.className = navLinks.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+  
+  // Assure que l'icône est rendue correctement avant l'animation
+  requestAnimationFrame(() => {
+    hamburger.appendChild(newIcon);
+  });
+  
+  // Met à jour l'état d'accessibilité
+  hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
 });
 
 // Close menu when a link is clicked
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
-    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+    
+    // Supprime l'icône existante et ajoute l'icône du menu
+    const currentIcon = hamburger.querySelector('i');
+    if (currentIcon) {
+      currentIcon.remove();
+    }
+    
+    const newIcon = document.createElement('i');
+    newIcon.className = 'fas fa-bars';
+    hamburger.appendChild(newIcon);
+    
+    // Met à jour l'état d'accessibilité
+    hamburger.setAttribute('aria-expanded', 'false');
   });
 });
 
